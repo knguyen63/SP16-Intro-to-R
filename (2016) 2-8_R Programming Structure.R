@@ -6,11 +6,11 @@ attach(Leafdata)
 x <- LEAF.L
 y <- LEAF.W
 
-#Function viewing ratio of leaf length to leaf width and vice versa
+#Function viewing ratio of leaf length to leaf width and vice versa by height of tree
 Leaf <- function(x,y) {
   ratio1 <- x/y
   ratio2 <- y/x
-  return(rbind(ratio1, ratio2))
+  return(cbind(ratio1, ratio2, by=HEIGHT))
   }
 
 Leaf(x,y)
